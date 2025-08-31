@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital - La Vera Pizza Artesanal</title>
+    <style>
+        /* --- Estilos Gerais --- */
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f5f2;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* --- Cabeçalho --- */
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #e0cda9;
+        }
+
+        header h1 {
+            font-size: 3em;
+            color: #d35400;
+            margin: 0;
+            font-family: 'Georgia', serif;
+        }
+
+        header p {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin: 5px 0 0;
+        }
+
+        /* --- Seções do Cardápio --- */
+        .menu-section {
+            margin-top: 40px;
+        }
+
+        .menu-section h2 {
+            font-size: 2.5em;
+            color: #c0392b;
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Georgia', serif;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .menu-subtext {
+            text-align: center;
+            color: #555;
+            margin-top: -20px;
+            margin-bottom: 30px;
+        }
+
+        /* --- Itens do Cardápio --- */
+        .menu-item {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .menu-item:hover {
+            transform: scale(1.03);
+        }
+
+        .menu-item img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .menu-item-content {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .menu-item h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.6em;
+            color: #2c3e50;
+        }
+
+        .menu-item .description {
+            margin-bottom: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .menu-item .price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+
+        .menu-item .rating {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .rating .stars {
+            color: #f39c12;
+            font-size: 1.2em;
+        }
+
+        /* --- Seção de Bebidas --- */
+        .drinks-list {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        .drinks-list li {
+            background-color: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.1em;
+        }
+        
+        .drink-name {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .drink-price {
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        /* --- Botão de Pedido --- */
+        .cta-button {
+            display: block;
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #25D366;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #128C7E;
+        }
+
+        /* --- Responsividade para Celulares --- */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
+            .menu-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .menu-item img {
+                width: 100%;
+                height: 200px;
+            }
+            .menu-item-content {
+                padding: 15px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🍕 La Vera Pizza Artesanal 🍕</h1>
+            <p>Onde a tradição encontra o sabor!</p>
+        </header>
+
+        <main>
+            <section class="menu-section">
+                <h2>⭐ Entradas para Compartilhar</h2>
+                
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/8aJ3E9h.jpeg" alt="Cornetto di Calabresa">
+                    <div class="menu-item-content">
+                        <h3>Cornetto di Calabresa</h3>
+                        <p class="description">Deliciosos cones de massa de pizza recheados com calabresa moída, mussarela e um toque de orégano.</p>
+                        <div class="price">R$ 28,90 (8 unidades)</div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span> - "Perfeito pra começar! A massa é levinha e o recheio é muito saboroso."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/9f7b4c2.jpeg" alt="Burrata ao Pesto">
+                    <div class="menu-item-content">
+                        <h3>Burrata ao Pesto</h3>
+                        <p class="description">Burrata cremosa servida sobre uma cama de rúcula, com tomates cereja confit, pesto de manjericão fresco e torradas artesanais.</p>
+                        <div class="price">R$ 45,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> - "A melhor burrata que já comi! O pesto faz toda a diferença. Divina!"
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="menu-section">
+                <h2>🇮🇹 Pizzas Salgadas</h2>
+                <p class="menu-subtext">Nossas pizzas são feitas com massa de fermentação natural e estão disponíveis nos tamanhos Grande (8 fatias) e Família (12 fatias).</p>
+
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/2YlQ8xM.jpeg" alt="Pizza Margherita Clássica">
+                    <div class="menu-item-content">
+                        <h3>1. Margherita Clássica</h3>
+                        <p class="description">Molho de tomate italiano, mussarela de búfala fresca, fatias de tomate, manjericão fresco e um fio de azeite extra virgem.</p>
+                        <div class="price">Grande R$ 62,00 | Família R$ 75,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> - "A simplicidade perfeita! Ingredientes de alta qualidade, sabor incrível."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/O4Z8w1k.jpeg" alt="Pizza Calabresa Especial">
+                    <div class="menu-item-content">
+                        <h3>2. Calabresa Especial da Casa</h3>
+                        <p class="description">Molho de tomate italiano, mussarela, fatias de calabresa artesanal curada, anéis de cebola roxa e azeitonas pretas.</p>
+                        <div class="price">Grande R$ 65,00 | Família R$ 78,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span> - "A calabresa tem um sabor defumado delicioso e a cebola roxa dá um toque agridoce."
+                        </div>
+                    </div>
+                </div>
+                
+                 <div class="menu-item">
+                    <img src="https://i.imgur.com/bKjWdFl.jpeg" alt="Pizza Portuguesa Completa">
+                    <div class="menu-item-content">
+                        <h3>3. Portuguesa Completa</h3>
+                        <p class="description">Molho de tomate, mussarela, presunto cozido, ovos, cebola, pimentão em tiras, ervilha e azeitonas verdes.</p>
+                        <div class="price">Grande R$ 68,00 | Família R$ 82,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span> - "Uma portuguesa de respeito! Bem recheada e com ingredientes frescos."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/6tH7E8N.jpeg" alt="Pizza Frango com Catupiry">
+                    <div class="menu-item-content">
+                        <h3>4. Frango com Catupiry Original</h3>
+                        <p class="description">Molho de tomate, mussarela, frango desfiado e temperado, coberto com o autêntico Catupiry® e milho verde.</p>
+                        <div class="price">Grande R$ 67,00 | Família R$ 80,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> - "Cremosa e muito saborosa. O Catupiry é original mesmo, faz toda a diferença!"
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/sC5vJ9y.jpeg" alt="Pizza La Vera">
+                    <div class="menu-item-content">
+                        <h3>5. La Vera (A Especial da Casa)</h3>
+                        <p class="description">Molho de tomate italiano, mussarela especial, lâminas de presunto parma, queijo brie, geleia de figo e rúcula fresca.</p>
+                        <div class="price">Grande R$ 85,00 | Família R$ 99,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> - "Experiência gastronômica! A combinação do salgado com o doce é sensacional."
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <h2>🍫 Pizzas Doces</h2>
+                 <p class="menu-subtext">Tamanho único - 6 fatias</p>
+
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/d4zK2wY.jpeg" alt="Pizza de Chocolate com Morango">
+                    <div class="menu-item-content">
+                        <h3>1. Chocolate com Morango</h3>
+                        <p class="description">Deliciosa camada de chocolate ao leite derretido, coberta com morangos frescos e chocolate granulado.</p>
+                        <div class="price">R$ 55,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span> - "A sobremesa perfeita! Chocolate de qualidade e morangos sempre frescos."
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="https://i.imgur.com/rT3P6zN.jpeg" alt="Pizza de Banana Nevada">
+                    <div class="menu-item-content">
+                        <h3>2. Banana Nevada</h3>
+                        <p class="description">Fatias de banana caramelizadas com açúcar e canela, cobertas com chocolate branco e leite condensado.</p>
+                        <div class="price">R$ 52,00</div>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span> - "Muito gostosa e bem doce! A canela dá um toque especial."
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="menu-section">
+                <h2>🥤 Bebidas</h2>
+                <ul class="drinks-list">
+                    <li><span class="drink-name">Refrigerante (Lata 350ml)</span> <span class="drink-price">R$ 7,00</span></li>
+                    <li><span class="drink-name">Refrigerante (Garrafa 2L)</span> <span class="drink-price">R$ 15,00</span></li>
+                    <li><span class="drink-name">Cerveja Long Neck (Heineken, Stella, Budweiser)</span> <span class="drink-price">R$ 12,00</span></li>
+                    <li><span class="drink-name">Água Mineral (com ou sem gás)</span> <span class="drink-price">R$ 5,00</span></li>
+                    <li><span class="drink-name">Suco Natural de Laranja (500ml)</span> <span class="drink-price">R$ 14,00</span></li>
+                </ul>
+            </section>
+
+            <a href="https://api.whatsapp.com/send?phone=55SEUNUMERO&text=Olá!%20Gostaria%20de%20fazer%20um%20pedido." class="cta-button" target="_blank">
+                Faça seu pedido pelo WhatsApp!
+            </a>
+        </main>
+    </div>
+
+</body>
+</html>
